@@ -1,0 +1,65 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Personel Management Program with Binary Data</title>
+</head>
+<body>
+	<h1>Personel Management Program with Binary Data</h1>
+
+	<fieldset>
+		<legend>Import & Export</legend>
+		<button id="import">Import</button>
+		<button id="export">Export</button>
+		<input type="file" id="file" style="display: none" />
+	</fieldset>
+
+	<form id="form">
+		<fieldset>
+			<legend>Add new employee</legend>
+
+			<label for="name">Name:</label>
+			<input type="text" id="name" />
+
+			<label for="age">Age:</label>
+			<input type="text" id="age" />
+
+			<label for="sex">Sex:</label>
+			<input type="radio" id="male" name="sex" value="male" /> Male
+			<input type="radio" id="female" name="sex" value="female" /> Female
+
+			<input type="submit" value="Add" />
+		</fieldset>
+	</form>
+
+	<div>
+		<h2>List of Employees</h2>
+
+		<table id="list" border="1" style="width: 100%">
+			<thead>
+				<tr>
+					<th style="width: 10%"></th>
+					<th style="width: 40%">Name</th>
+					<th style="width: 15%">Age</th>
+					<th style="width: 15%">Sex</th>
+					<th style="width: 20%"></th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</div>
+
+	<script type="text/template" id="employee">
+		<tr>
+			<td class="id"></td>
+			<td class="name"></td>
+			<td class="age"></td>
+			<td class="sex"></td>
+			<td>
+				<button class="update">수정</button>
+				<button class="delete">삭제</button>
+			</td>
+		</tr>
+	</script>
+	<script src="./js/app.js"></script>
+</body>
+</html>
